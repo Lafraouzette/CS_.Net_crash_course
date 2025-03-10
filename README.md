@@ -1,141 +1,148 @@
-# Objectif :  
-L'ibjectife de ce repo est d'apprendre les basiques de C# et .NET
-
-## C# vs .NET
-C# est un langage de programmation, tandis que .NET est un framework qui supporte C# ainsi que d'autres langages comme F# et VB.NET.
-
-## .NET Framework 
-.NET est principalement composé du CLR (Common Language Runtime) et de bibliothèques.
-
-### CLR 
-Lorsque un projet C# est compilé, le code est transformé en langage intermédiaire (IL). Le CLR intervient alors pour traduire ce code IL en code machine afin que la machine puisse le comprendre. Cela se fait grâce à la compilation Just-In-Time (JIT).
-
-### Architecture .NET 
-- **Classe** : Une classe est un modèle pour créer des objets.
-- **Namespace** : Un espace de noms regroupe plusieurs classes.
-- **Assembly** : Un assembly est un ensemble de types et de ressources qui sont traités comme une unité logique dans la distribution et le versionnement.
-
-# Introduction à C#
-
-C# est un langage de programmation orienté objet développé par Microsoft. Il est largement utilisé pour développer des applications Windows, des services web, et des applications pour la plateforme .NET. Voici quelques concepts clés :
-
-## 1. Structure de base d'un programme C#
-```csharp
-using System;
-
-namespace MonPremierProgramme
-{
-    class Program
-    {
-        static void Main(string[] args)
-        {
-            Console.WriteLine("Bonjour, monde!");
-        }
-    }
-}
-```
-- **using System;** : Importe l'espace de noms System, qui contient des classes de base comme `Console`.
-- **namespace** : Déclare un espace de noms qui permet d'organiser le code.
-- **class Program** : Déclare une classe nommée `Program`.
-- **static void Main(string[] args)** : Point d'entrée du programme. C'est la méthode qui est exécutée en premier.
-
-## 2. Types de données
-
-### Types de données primitifs
-```csharp
-int nombreEntier = 5;
-double nombreDecimal = 4.5;
-char caractere = 'A';
-string texte = "Bonjour";
-bool estVrai = true;
-```
-- **int** : Entier
-- **double** : Nombre à virgule flottante
-- **char** : Caractère unique
-- **string** : Chaîne de caractères
-- **bool** : Booléen (true ou false)
-
-
-### Types de données Non-primitifs
-Voici une version concise du contenu que vous avez fourni, structurée dans un fichier `README.md` :
-
-```markdown
-# Types de données en C#
-
-## Types de données primitifs
-```csharp
-int nombreEntier = 5;
-double nombreDecimal = 4.5;
-char caractere = 'A';
-string texte = "Bonjour";
-bool estVrai = true;
-```
-- **int** : Entier
-- **double** : Nombre à virgule flottante
-- **char** : Caractère unique
-- **string** : Chaîne de caractères
-- **bool** : Booléen (`true` ou `false`)
+# Objectif
+L'objectif de ce dépôt est d'apprendre les bases de .NET Framework en utilisant le langage C#.
 
 ---
 
-## Types de données non-primitifs
+## 1. Théorie
 
-### 1. **Classes**
-```csharp
-class Personne
-{
-    public string Nom;
-    public int Age;
-}
+### .NET Framework
+.NET est principalement composé de deux éléments fondamentaux :
+- **CLR (Common Language Runtime)** : Il assure l'exécution du code en le convertissant en code machine grâce à la compilation Just-In-Time (JIT).
+- **Bibliothèques de classes** : Elles fournissent un ensemble d'APIs permettant le développement d'applications.
+
+### 2. Common Language Runtime (CLR)
+Lorsqu'un projet C# est compilé, le code est transformé en langage intermédiaire (IL). Le CLR intervient ensuite pour traduire ce code IL en code machine exécutable par l'ordinateur.
+
+---
+
+## 3. Créer un projet
+
+Utilisez la commande suivante pour créer un nouveau projet .NET :
+
+```bash
+ dotnet new <project-type> <option>
 ```
 
-### 2. **Tableaux**
-```csharp
-int[] nombres = { 1, 2, 3, 4, 5 };
+Pour afficher la liste des modèles de projets disponibles :
+
+```bash
+ dotnet new
 ```
 
-### 3. **Listes**
-```csharp
-List<string> fruits = new List<string>();
-fruits.Add("Pomme");
+### 4. Types de projets .NET
+
+- **Console** : Application en ligne de commande.
+- **WebApp** : Application web.
+- **MVC** : Application web basée sur le modèle MVC.
+- **MAUI** : Application multi-plateforme.
+- **WPF** : Application de bureau Windows.
+
+Pour afficher la liste complète des types de projets :
+
+```bash
+ dotnet new list
 ```
 
-### 4. **Dictionnaires**
-```csharp
-Dictionary<string, int> ages = new Dictionary<string, int>();
-ages["Alice"] = 30;
+---
+
+## 5. Structure des fichiers et dossiers
+
+### 5.1. Fichiers .NET
+
+- **.csproj** : Fichier de configuration XML contenant les métadonnées du projet. Utilisé pour restaurer les dépendances et les outils avec :
+
+  ```bash
+  dotnet restore
+  ```
+
+- **.cs** : Fichier principal du code source C#.
+
+### 5.2. Dossiers .NET
+
+- **bin/** : Contient les fichiers compilés.
+- **obj/** : Contient des fichiers temporaires utilisés pendant le processus de compilation.
+
+---
+
+## 6. Composantes principales du code C#
+
+- **Classe** : Modèle permettant de créer des objets.
+- **Namespace** : Espace de noms regroupant plusieurs classes.
+- **Assembly** : Unité logique regroupant plusieurs types et ressources.
+
+---
+Voici une reformulation de votre texte pour le rendre plus clair et structuré :
+
+---
+
+# Pratique : Découverte de C# avec un projet .NET Console
+
+Dans ce dépôt, nous allons explorer les bases de C# en créant un projet .NET Console. Ce projet servira de démonstration pour comprendre les concepts fondamentaux du langage.
+
+---
+
+## 1. Création du projet
+
+Pour commencer, créez un nouveau projet .NET Console avec la commande suivante :
+
+```bash
+dotnet new console -n my_first_project
 ```
 
-### 5. **Chaînes de caractères (`string`)**
+Cela génère un projet nommé `my_first_project` avec une structure de base.
+
+---
+
+## 2. Premier programme : "Hello World"
+
+Ouvrez le fichier `Program.cs` et ajoutez le code suivant pour afficher un message dans la console :
+
 ```csharp
-string texte = "Bonjour";
+Console.WriteLine("Mon premier programme en C#");
 ```
 
-### 6. **Objets (`object`)**
-```csharp
-object obj = 42;
+### Compilation et exécution
+
+- Pour compiler le projet, utilisez :
+```bash
+  dotnet build
 ```
 
-### 7. **Interfaces**
-```csharp
-interface IVehicule { void Demarrer(); }
-```
+- Pour exécuter le projet, utilisez :
+```bash
+ dotnet run
 
-### 9. **Événements (`event`)**
-```csharp
-event EventHandler Clique;
-```
+  ```
 
-### 13. **Collections génériques**
-```csharp
-HashSet<string> fruits = new HashSet<string>();
-```
+---
 
-## 3. Structures de contrôle
-- **Condition if-else**
+## 3. Types de données en C#
+
+### Types de données primitifs
+
+- **`int`** : Entier (exemple : `int age = 25;`).
+- **`double`** : Nombre à virgule flottante (exemple : `double pi = 3.14;`).
+- **`char`** : Caractère unique (exemple : `char letter = 'A';`).
+- **`string`** : Chaîne de caractères (exemple : `string name = "Alice";`).
+- **`bool`** : Booléen (`true` ou `false`, exemple : `bool isActive = true;`).
+
+### Types de données non-primitifs
+
+- **Classes et objets** : Structures personnalisées pour modéliser des entités.
+- **Interfaces** : Contrats définissant des méthodes que les classes doivent implémenter.
+- **Tableaux** : Collections de taille fixe (exemple : `int[] numbers = { 1, 2, 3 };`).
+- **Listes** : Collections dynamiques (exemple : `List<string> names = new List<string>();`).
+
+---
+
+## 4. Structures de contrôle
+
+### Condition `if-else`
+
+Permet d'exécuter du code en fonction d'une condition :
+
 ```csharp
-int age = 18;
-if (age >= 18)
+if (age > 18)
 {
     Console.WriteLine("Vous êtes majeur.");
 }
@@ -144,170 +151,90 @@ else
     Console.WriteLine("Vous êtes mineur.");
 }
 ```
-- **Boucle for**
+
+### Boucle `for`
+
+Permet de répéter une action un nombre défini de fois :
+
 ```csharp
 for (int i = 0; i < 5; i++)
 {
-    Console.WriteLine("i vaut " + i);
-}
-```
-- **Boucle while**
-```csharp
-int i = 0;
-while (i < 5)
-{
-    Console.WriteLine("i vaut " + i);
-    i++;
+    Console.WriteLine("Itération : " + i);
 }
 ```
 
-## 4. Fonctions
+### Boucle `while`
+
+Permet de répéter une action tant qu'une condition est vraie :
+
 ```csharp
-static int Addition(int a, int b)
+int count = 0;
+while (count < 5)
+{
+    Console.WriteLine("Compteur : " + count);
+    count++;
+}
+```
+
+---
+
+## 5. Gestion des événements
+
+Les événements permettent de déclencher des actions en réponse à des actions utilisateur ou à des changements d'état. Par exemple :
+
+```csharp
+event EventHandler Clique;
+
+// Déclencheur d'événement
+Clique?.Invoke(this, EventArgs.Empty);
+```
+! on va les apprendre apres . 
+---
+
+## 6. Les fonctions
+
+Les fonctions (ou méthodes) permettent de regrouper du code réutilisable. Par exemple :
+
+```csharp
+public int Addition(int a, int b)
 {
     return a + b;
 }
-
-static void Main(string[] args)
-{
-    int resultat = Addition(3, 4);
-    Console.WriteLine("Le résultat est : " + resultat);
-}
 ```
-- Les fonctions sont déclarées avec un type de retour, un nom, et des paramètres entre parenthèses.
 
-## 5. Classes et objets
-```csharp
-class Personne
-{
-    public string Nom;
-    public int Age;
+---
 
-    public void SePresenter()
-    {
-        Console.WriteLine("Bonjour, je m'appelle " + Nom + " et j'ai " + Age + " ans.");
-    }
-}
+## 7. Héritage
 
-static void Main(string[] args)
-{
-    Personne personne = new Personne();
-    personne.Nom = "Alice";
-    personne.Age = 30;
-    personne.SePresenter();
-}
-```
-- Une classe définit un modèle pour un objet. Un objet est une instance d'une classe.
-- **public** : Membre accessible depuis l'extérieur de la classe.
+L'héritage permet de créer une nouvelle classe basée sur une classe existante. Par exemple :
 
-## 6. Héritage
-```csharp
-class Animal
-{
-    public void Manger()
-    {
-        Console.WriteLine("L'animal mange.");
-    }
-}
+- public class Dog : Animal et son constructeur : public Dog(string name) : base(name) // Appel du constructeur de la classe de base{    }
 
-class Chien : Animal
-{
-    public void Aboyer()
-    {
-        Console.WriteLine("Le chien aboie.");
-    }
-}
-
-static void Main(string[] args)
-{
-    Chien chien = new Chien();
-    chien.Manger();  // Méthode héritée de la classe Animal
-    chien.Aboyer();
-}
-```
-- L'héritage permet de créer une nouvelle classe basée sur une classe existante.
-
-## 7. Interfaces
-```csharp
-interface IVehicule
-{
-    void Demarrer();
-}
-
-class Voiture : IVehicule
-{
-    public void Demarrer()
-    {
-        Console.WriteLine("La voiture démarre.");
-    }
-}
-
-static void Main(string[] args)
-{
-    Voiture voiture = new Voiture();
-    voiture.Demarrer();
-}
-```
-- Une interface définit un contrat que les classes doivent respecter. Une classe qui implémente une interface doit fournir des implémentations pour toutes les méthodes de l'interface.
 
 ## 8. Gestion des exceptions
+
+Les exceptions permettent de gérer les erreurs de manière structurée. Utilisez les blocs `try`, `catch`, et `finally` :
+
 ```csharp
 try
 {
-    int a = 5;
-    int b = 0;
-    int resultat = a / b;
+    int result = 10 / 0; // Division par zéro
 }
-catch (DivideByZeroException e)
+catch (DivideByZeroException ex)
 {
-    Console.WriteLine("Erreur : Division par zéro.");
+    Console.WriteLine("Erreur : " + ex.Message);
 }
-```
-- Les exceptions sont gérées avec les blocs `try`, `catch`, et éventuellement `finally`.
-
-## 9. Propriétés
-```csharp
-class Personne
+finally
 {
-    private string nom;
-
-    public string Nom
-    {
-        get { return nom; }
-        set { nom = value; }
-    }
-}
-
-static void Main(string[] args)
-{
-    Personne personne = new Personne();
-    personne.Nom = "Alice";
-    Console.WriteLine(personne.Nom);
+    Console.WriteLine("Exécuté dans tous les cas.");
 }
 ```
-- Les propriétés permettent d'encapsuler les champs d'une classe et d'ajouter des logiques spécifiques lors de l'accès ou la modification des valeurs.
 
-## 10. Collections
-- **Tableaux**
-```csharp
-int[] nombres = { 1, 2, 3, 4, 5 };
-```
-- **Listes**
-```csharp
-List<string> fruits = new List<string>();
-fruits.Add("Pomme");
-fruits.Add("Banane");
-```
-- **Dictionnaires**
-```csharp
-Dictionary<string, int> ages = new Dictionary<string, int>();
-ages["Alice"] = 30;
-ages["Bob"] = 25;
-```
+---
 
-## .NET
-- **dotnet new console** : La commande dotnet new console est utilisée pour créer un nouveau projet de type "console" dans .NET. Un projet console est une application qui s'exécute dans une fenêtre de terminal ou de commande, et qui prend en entrée des commandes de l'utilisateur pour produire des sorties textuelles.
-- **dotnet build** : Pour compiler le projet.
-- **dotnet run** : Pour compiler et exécuter immédiatement le projet.
-- **dotnet restore** : Pour restaurer les packages NuGet nécessaires (cela se fait automatiquement avec dotnet build ou dotnet run si nécessaire).
-- **dotnet new** : Sans arguments, cette commande affiche la liste des modèles de projet disponibles (web, bibliothèque de classes, tests unitaires, etc.).
+## 10. Ressources utiles
+
+- [Documentation officielle .NET](https://learn.microsoft.com/fr-fr/dotnet/)
+- [Tutoriels C#](https://learn.microsoft.com/fr-fr/dotnet/csharp/)
+
+Bon apprentissage ! 🚀

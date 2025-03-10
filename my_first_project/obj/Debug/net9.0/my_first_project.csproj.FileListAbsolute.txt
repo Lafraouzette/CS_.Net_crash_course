@@ -1,0 +1,15 @@
+C:\Users\mouhssine\Desktop\CS_.Net_crash_course\my_first_project\bin\Debug\net9.0\my_first_project.exe
+C:\Users\mouhssine\Desktop\CS_.Net_crash_course\my_first_project\bin\Debug\net9.0\my_first_project.deps.json
+C:\Users\mouhssine\Desktop\CS_.Net_crash_course\my_first_project\bin\Debug\net9.0\my_first_project.runtimeconfig.json
+C:\Users\mouhssine\Desktop\CS_.Net_crash_course\my_first_project\bin\Debug\net9.0\my_first_project.dll
+C:\Users\mouhssine\Desktop\CS_.Net_crash_course\my_first_project\bin\Debug\net9.0\my_first_project.pdb
+C:\Users\mouhssine\Desktop\CS_.Net_crash_course\my_first_project\obj\Debug\net9.0\my_first_project.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\mouhssine\Desktop\CS_.Net_crash_course\my_first_project\obj\Debug\net9.0\my_first_project.AssemblyInfoInputs.cache
+C:\Users\mouhssine\Desktop\CS_.Net_crash_course\my_first_project\obj\Debug\net9.0\my_first_project.AssemblyInfo.cs
+C:\Users\mouhssine\Desktop\CS_.Net_crash_course\my_first_project\obj\Debug\net9.0\my_first_project.csproj.CoreCompileInputs.cache
+C:\Users\mouhssine\Desktop\CS_.Net_crash_course\my_first_project\obj\Debug\net9.0\my_first_project.sourcelink.json
+C:\Users\mouhssine\Desktop\CS_.Net_crash_course\my_first_project\obj\Debug\net9.0\my_first_project.dll
+C:\Users\mouhssine\Desktop\CS_.Net_crash_course\my_first_project\obj\Debug\net9.0\refint\my_first_project.dll
+C:\Users\mouhssine\Desktop\CS_.Net_crash_course\my_first_project\obj\Debug\net9.0\my_first_project.pdb
+C:\Users\mouhssine\Desktop\CS_.Net_crash_course\my_first_project\obj\Debug\net9.0\my_first_project.genruntimeconfig.cache
+C:\Users\mouhssine\Desktop\CS_.Net_crash_course\my_first_project\obj\Debug\net9.0\ref\my_first_project.dll
