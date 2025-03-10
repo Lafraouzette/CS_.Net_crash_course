@@ -71,7 +71,6 @@ Pour afficher la liste complète des types de projets :
 - **Assembly** : Unité logique regroupant plusieurs types et ressources.
 
 ---
-Voici une reformulation de votre texte pour le rendre plus clair et structuré :
 
 ---
 
